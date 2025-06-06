@@ -1,0 +1,228 @@
+:root {
+    --bg: #eaf6ff;
+    --card: #cce6ff;
+    --card-light: #f0f7ff;
+    --accent: #00d0ff;
+    --accent-dark: #0077ff;
+    --text-dark: #102542;
+    --text-light: #fff;
+    --primary-font: 'Inter', Arial, sans-serif;
+    --btn-linkedin: #2867b2;
+    --btn-github: #232323;
+    --btn-resume: #0077ff;
+}
+
+body {
+    background: var(--bg);
+    margin: 0;
+    font-family: var(--primary-font);
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding: 18px 24px 0 24px;
+    border-radius: 16px;
+    background: var(--card-light);
+}
+
+nav a {
+    margin-left: 32px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #0077ff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: 220px 160px 120px;
+    gap: 24px;
+    grid-template-areas:
+        "title photo skills"
+        "bio workex education"
+        "certifications projects contact";
+}
+
+.card {
+    background: var(--card-light);
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-width: 0;
+}
+
+.card-title {
+    grid-area: title;
+    background: var(--card);
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: flex-start;
+    gap: 12px;
+    position: relative;
+    min-width: 0;
+}
+
+.card-title .italic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.card-title .bold {
+    font-weight: 800;
+    display: inline-block;
+}
+
+.card-photo {
+    grid-area: photo;
+    background: var(--accent-dark);
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+}
+
+.card-photo img {
+    width: 100%;
+    height: 100%;
+    max-width: 220px;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: auto;
+    display: block;
+    background: #e2bcbc;
+}
+
+.card-info {
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.card-bio {
+    grid-area: bio;
+    font-size: 1rem;
+    background: var(--accent-dark);
+    color: #232323;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    position: relative;
+}
+
+.card-contact {
+    grid-area: contact;
+    background: var(--card);
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-btn {
+    padding: 9px 22px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.18s, box-shadow 0.18s;
+    outline: none;
+    box-shadow: 0 2px 8px 0 #b1d6ef4d;
+    display: inline-block;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.linkedin-btn {
+    background: var(--btn-linkedin);
+}
+.linkedin-btn:hover, .linkedin-btn:focus {
+    background: #194174;
+}
+
+.github-btn {
+    background: var(--btn-github);
+}
+.github-btn:hover, .github-btn:focus {
+    background: #444;
+}
+
+.resume-btn {
+    background: var(--btn-resume);
+}
+.resume-btn:hover, .resume-btn:focus {
+    background: #0055bb;
+}
+
+.info-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            "title"
+            "photo"
+            "skills"
+            "bio"
+            "workex"
+            "education"
+            "certifications"
+            "projects"
+            "contact";
+        gap: 18px;
+    }
+
+    .main-container {
+        padding: 0 4px;
+    }
+
+    .card-photo img {
+        max-width: 100%;
+        max-height: 180px;
+    }
+}

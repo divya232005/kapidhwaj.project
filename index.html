@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main-heading {
+            text-align: center;
+            color: #0077cc;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 32px 0 24px 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 8px #b1d6ef44;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-heading">PORTFOLIO GENERATOR</h1>
+    <div class="container">
+        <h2>Create Your Portfolio</h2>
+        <form id="portfolioForm" autocomplete="off">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="typeofeng">Choose Your Template:</label>
+            <select name="typeofengineer" id="typeofeng">
+                <option value="General Portfolio">General Portfolio</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Mechanical Engineer">Mechanical Engineer</option>
+            </select>
+
+            <label for="profileImg">Profile Image:</label>
+            <input type="file" id="profileImg" accept="image/*">
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <label for="pnumber">Phone No:</label>
+            <input type="tel" id="pnumber" placeholder="Phone No" pattern="[0-9]{10}" maxlength="10" required>
+
+            <label for="Skills">Skills:</label>
+            <textarea id="Skills" rows="3" placeholder="List your Skills (separated by commas)"></textarea>
+
+            <label for="education">Education:</label>
+            <textarea id="education" rows="2" placeholder="List your Education (separated by commas)"></textarea>
+
+            <label for="workex">Work Experience:</label>
+            <textarea id="workex" rows="2" placeholder="List your Work Experience (separated by commas)"></textarea>
+
+            <label for="briefintro">Brief Introduction:</label>
+            <textarea id="briefintro" rows="4" placeholder="Brief Introduction"></textarea>
+
+            <label for="linkedin">LinkedIn Profile URL:</label>
+            <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+
+            <label for="github">GitHub Profile URL:</label>
+            <input type="url" id="github" placeholder="https://github.com/yourusername">
+
+            <label for="resume">Resume Link (URL):</label>
+            <input type="url" id="resume" placeholder="https://your-resume-link.com">
+
+            <label for="certifications">Certifications:</label>
+            <textarea id="certifications" rows="2" placeholder="List your certifications (e.g., AWS, Coursera, etc.)"></textarea>
+
+            <label for="projects">Projects (Title, Description, Optional Link):</label>
+            <textarea id="projects" rows="3" placeholder="e.g., Portfolio Website - A personal portfolio made using HTML, CSS, JS. Link: https://..."></textarea>
+
+            <button type="submit">Create Portfolio Website</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

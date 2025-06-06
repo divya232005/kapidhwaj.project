@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}} - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="templates/software.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <nav>
+                <a href="#skills">SKILLS</a>
+                <a href="#education">EDUCATION</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </header>
+        <section class="grid">
+            <div class="card card-title">
+                <div>
+                    Hi, I'm <span class="bold">{{name}}</span><br>
+                    <span class="italic">{{type}}</span>
+                </div>
+            </div>
+            <div class="card card-photo">
+                {{imgSrc}}
+            </div>
+            <div class="card card-info" id="skills">
+                <div class="info-title">Skills</div>
+                <ul class="info-list">
+                    {{skills}}
+                </ul>
+            </div>
+            <div class="card card-bio" id="about">
+                {{intro}}
+            </div>
+            <div class="card card-info" id="education">
+                <div class="info-title">Education</div>
+                <ul class="info-list">
+                    {{education}}
+                </ul>
+            </div>
+            <div class="card card-info" id="workex">
+                <div class="info-title">Work Experience</div>
+                <ul class="info-list">
+                    {{workex}}
+                </ul>
+            </div>
+            <div class="card card-info" id="certifications">
+                <div class="info-title">Certifications</div>
+                <ul class="info-list">
+                    {{certifications}}
+                </ul>
+            </div>
+            <div class="card card-info" id="projects">
+                <div class="info-title">Projects</div>
+                <ul class="info-list">
+                    {{projects}}
+                </ul>
+            </div>
+            <div class="card card-contact" id="contact">
+    <div class="contact-title">Contact Info</div>
+    <div>Email: {{email}}</div>
+    <div>Phone: {{phone}}</div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
+        <a class="contact-btn linkedin-btn" href="{{linkedin}}" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="contact-btn github-btn" href="{{github}}" target="_blank" rel="noopener">GitHub</a>
+        <a class="contact-btn resume-btn" href="{{resume}}" target="_blank" rel="noopener">Resume</a>
+    </div>
+</div>
+        </section>
+    </div>
+</body>
+
+</html>

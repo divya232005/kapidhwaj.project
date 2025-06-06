@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 420px;
+    margin: 3rem auto 2.5rem auto;
+    background: #fff;
+    padding: 2.2rem 2rem 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+}
+
+h2 {
+    color: #4f8cff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.20rem;
+    font-size: 1rem;
+    color: #345;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    margin-top: 0.05rem;
+    border-radius: 6px;
+    border: 1px solid #c2c9d6;
+    font-size: 1rem;
+    background: #f7faff;
+    transition: border 0.18s;
+    box-sizing: border-box;
+    margin-bottom: 0.2rem;
+}
+
+input[type="file"] {
+    padding: 0.35rem 0.25rem;
+    background: #fff;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+    background: #eaf1fa;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 48px;
+}
+
+button {
+    background: linear-gradient(90deg, #4f8cff 60%, #2563eb 100%);
+    color: #fff;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.09);
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #2563eb 60%, #4f8cff 100%);
+}
+
+@media (max-width: 540px) {
+    .container {
+        max-width: 98vw;
+        margin: 1.3rem auto;
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    }
+
+    .main-heading {
+        font-size: 1.7em !important;
+    }
+}
